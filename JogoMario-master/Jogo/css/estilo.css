@@ -1,0 +1,168 @@
+html, body
+{
+    margin:0;
+    border: 0;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0);
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tela
+{
+    width: 50%;
+    height: 500px;
+    margin:0 auto;
+    border: 5px solid rgb(255, 255, 255);
+    border-bottom: 15px solid rgb(0, 130, 14);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#00deff, #E0F6FF);
+}
+
+.instagram {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, .1);
+    background: linear-gradient(to right,
+            rgb(76, 217, 105),
+            rgb(52, 170, 220),
+            rgb(88, 86, 217),
+            rgb(255, 45, 83),
+            rgb(255, 214, 7),
+            rgb(88, 86, 217),
+            rgb(52, 170, 220),
+            rgb(61, 225, 75));
+    background-size: 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 10;
+    text-align: left;
+    animation: sTransition 10s linear infinite;
+}
+
+@keyframes sTransition {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.tubo{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+    animation: tubo 1.5s infinite linear;
+}
+
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+}
+
+.nuvem1
+{
+    position: absolute;
+    width: 100px;
+    animation: nuvem1voando 25s infinite linear;
+    top: 230px;
+}
+
+.nuvem2
+{
+    position: absolute;
+    width: 200px;
+    animation: nuvem2voando 30s infinite linear;
+    top: 60px;
+}
+
+.nuvem3
+{
+    position: absolute;
+    width: 250px;
+    animation: nuvem3voando 40s infinite linear;
+    top: 150px;
+}
+
+.pular
+{
+    animation: pular 500ms ease-out;
+}
+
+@keyframes tubo{
+    from    {
+        right: -80px;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+
+}
+
+@keyframes pular{
+    0%  {
+        bottom: 0;
+    }
+
+    50%
+    {
+        bottom: 200px;
+    }
+
+    100%
+    {
+        bottom: 0;
+    }
+
+}
+
+@keyframes nuvem1voando
+{
+    from
+    {
+        right: -100px;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+}
+
+@keyframes nuvem2voando
+{
+    from
+    {
+        right: -200px;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+}
+
+@keyframes nuvem3voando
+{
+    from
+    {
+        right: -250px;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+}
